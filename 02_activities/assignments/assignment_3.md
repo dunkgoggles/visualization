@@ -9,21 +9,95 @@
 - For each visualization, describe and justify: 
     > What software did you use to create your data visualization?
 
+    1. I used Python for Visualization 1, specifically the pandas and matplotlib libraries, to create this data visualization. These tools allow for flexible, programmatic creation of charts, and the process is fully reproducible via the provided script.  
+
+    2. Excel Visualization: https://docs.google.com/spreadsheets/d/19LMgMAZcGp6kbCVO7gvoZC8CvoBJDsxb/edit?usp=sharing&ouid=109009859095318812232&rtpof=true&sd=true
+
+    I used Microsoft Excel to create a horizontal bar chart that visualizes the top contaminants contributing to fish consumption advisories in Ontario.
+
     > Who is your intended audience? 
+
+    1. The intended audience includes policy-makers, environmental analysts, and members of the public concerned with fish consumption safety in Ontario. It's also suitable for students and educators exploring environmental data or health advisories
+
+    2. The intended audience includes members of the general public, health-conscious consumers, and policy-makers interested in environmental health and food safety, especially those in Ontario.
     
     > What information or message are you trying to convey with your visualization? 
+
+    1. This visualization communicates how advisory levels (i.e., consumption recommendations based on contaminant risks) vary by fish species. By focusing on the top 20 most commonly tested species, the visualization helps identify which species are most frequently associated with higher-risk advisories.
+
+    2. The visualization highlights the most common chemical contaminants, such as PCBs, mercury, and dioxins—that lead to fish consumption advisories. The goal is to raise awareness of what substances most frequently pose health risks in Ontario’s lakes and rivers.
     
     > What aspects of design did you consider when making your visualization? How did you apply them? With what elements of your plots? 
+
+    1. Initially I had intended to build an interactive map but it proved to be too difficult for me at this time. 
+
+        Key aspects of design included:
+        - A stacked horizontal bar chart for legibility of long fish species names.
+        - A custom color palette progressing from cool blues to deep purples, - - - highlighting increasing advisory levels while avoiding the overuse of aggressive red hues.
+        - A clean layout with clear labels, sorted species, and a legend for interpretability.
+        - Careful use of proportions (not just raw counts) to show distribution of advisory levels per species.
     
+    2. Key design considerations included:
+        - Clarity: I used a horizontal bar chart for easy label readability.
+        - Color accessibility: I applied a blue-to-indigo gradient to visually represent contaminant frequency without overwhelming color variation.
+        - Minimalism: I removed non-essential elements (e.g., gridlines and borders) to keep the focus on the data.
+        - Typography: Axis labels and titles were adjusted for legibility using bold and larger fonts.
+
+
     > How did you ensure that your data visualizations are reproducible? If the tool you used to make your data visualization is not reproducible, how will this impact your data visualization? 
+
+    1. This piece is fully reproducable. It uses a shared dataset (Guide_to_Eating_Ontario_Fish_Advisory_Database_2024.csv). The script includes all steps from data loading and cleaning to plotting, and dependencies are standard open-source Python libraries. 
+
+    2. The chart is based on a CSV file derived from the 2024 Ontario Fish Advisory dataset. The process involved:
+        - Preprocessing data in Python to extract relevant contaminant counts.
+        - Exporting a clean, summarized CSV that can easily be reloaded in Excel or Sheets.
+        - Anyone with the same dataset and instructions can reproduce the chart. I also used consistent formulas and cell references in Excel, making it transparent and easy to replicate.
     
     > How did you ensure that your data visualization is accessible?  
+
+    1. The use of color gradients was chosen for perceptual clarity, with a conscious effort to avoid red-green combinations that are difficult for people with colorblindness. The use of a horizontal layout helps support screen reader parsing and reduces label overlap, and species names and axis labels are presented in plain language, with no technical jargon.
+
+    2.  - Chose high-contrast color schemes that are friendly to colorblind viewers.
+        - Used text labels and clear titles so that the visualization can be interpreted without color alone.
+        - Avoided relying on hover effects or interactivity, which may not be accessible to all users.
+        - Ensured that fonts were readable and elements were spaced to avoid clutter
     
     > Who are the individuals and communities who might be impacted by your visualization?  
+
+    1. Communities impacted may include:
+        - Anglers and fish consumers in Ontario
+        - Indigenous communities who may rely on fish as a key part of their diet
+        - Environmental justice organizations concerned with pollution exposure
+        - Public health stakeholders who communicate consumption safety
+    
+    2.  - Ontario residents, especially those who fish or eat locally caught fish.
+        - Indigenous communities who rely on traditional fishing practices.
+        - Public health agencies and environmental organizations aiming to educate the public or create policy.
     
     > How did you choose which features of your chosen dataset to include or exclude from your visualization? 
+
+    1. I chose to:
+        - Include the Specname (fish species) and Adv Level (advisory level) columns
+        - Focus on the top 20 species by frequency to keep the plot readable and relevant
+        - Exclude geographic location, contaminant cause, and fish length in this visualization to avoid overcomplication and keep the message focused.
+
+    2. I chose to focus on the “Advisory Cause” column and aggregated counts to show which contaminants are most frequently flagged. I excluded other dimensions like fish species, location, or advisory level to keep the message focused and clear for a general audience.
+
+    
     
     > What ‘underwater labour’ contributed to your final data visualization product?
+
+    1. This visualization involved several invisible steps:
+        - Data cleaning: resolving inconsistent column names and formats
+        - Exploration: assessing distributions, null values, and advisory level breakdowns
+        - Trial and error: testing various chart types, sort orders, and color schemes
+        - Debugging: handling CSV encoding issues, column coercion, and filtering errors
+        - Design iteration: adjusting palette and layout to meet both clarity and accessibility standards
+
+    2.  - Data cleaning and transformation in Python to extract advisory causes.
+        - Manual inspection of column names, value formatting, and encoding issues.
+        - Trial-and-error chart design in Excel to adjust colors, labels, and formatting.
+        - Iterative feedback and troubleshooting visualization techniques across different platforms (Tableau, Python, Excel) to land on a practical and effective approach.
 
 - This assignment is intentionally open-ended - you are free to create static or dynamic data visualizations, maps, or whatever form of data visualization you think best communicates your information to your audience of choice! 
 - Total word count should not exceed **(as a maximum) 1000 words** 
